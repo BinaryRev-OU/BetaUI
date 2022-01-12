@@ -13,15 +13,15 @@ public struct BUISecureTextField: View {
     @Binding var password: String
     let placeholder: String
     let keyboardType: UIKeyboardType
-    let sfSymbol: String?
-    let textLeading: CGFloat
+    var sfSymbol: String = "key"
+    var textLeading: CGFloat = 30
     
-    public init(password: Binding<String>, placeholder: String, keyboardType: UIKeyboardType, sfSymbol: String?, textLeading: CGFloat) {
+    public init(password: Binding<String>, placeholder: String, keyboardType: UIKeyboardType, sfSymbol: String, textLeading: CGFloat) {
         self._password = password
         self.placeholder = placeholder
         self.keyboardType = keyboardType
         self.sfSymbol = sfSymbol
-        self.textLeading = 30
+        self.textLeading = textLeading
     }
     
     public var body: some View {
@@ -39,13 +39,7 @@ public struct BUISecureTextField: View {
                             .foregroundColor(checkIfTextFieldIsEmpty(text: password) ? Color.gray : .bUIInputTextFieldColor)
                             .opacity(checkIfTextFieldIsEmpty(text: password) ? 0.3 : 1)
                             .padding(.horizontal, 5)
-                    } else {
-                        Image(systemName: "key")
-                            .foregroundColor(checkIfTextFieldIsEmpty(text: password) ? Color.gray : .bUIInputTextFieldColor)
-                            .opacity(checkIfTextFieldIsEmpty(text: password) ? 0.3 : 1)
-                            .padding(.horizontal, 5)
                     }
-                    
                     BUIInputTextFieldBorder()
                 }
             )

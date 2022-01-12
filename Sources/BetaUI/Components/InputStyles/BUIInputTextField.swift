@@ -13,14 +13,14 @@ public struct BUIInputTextField: View {
     let placeholder: String
     let keyboardType: UIKeyboardType
     let sfSymbol: String?
-    let textLeading: CGFloat
+    var textLeading: CGFloat = 30
     
     public init(text: Binding<String>, placeholder: String, keyboardType: UIKeyboardType, sfSymbol: String?, textLeading: CGFloat) {
         self._text = text
         self.placeholder = placeholder
         self.keyboardType = keyboardType
         self.sfSymbol = sfSymbol
-        self.textLeading = 30
+        self.textLeading = textLeading
     }
         
     public var body: some View {
