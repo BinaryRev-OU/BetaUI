@@ -27,8 +27,10 @@ public extension Color {
      static let bUIInverseButtonTextColor = kMainColor1
      */
     
-    static let bUIHeaderTextColor = Color(.green)
-    
+    // Converting hex string to Color
+    // https://stackoverflow.com/questions/24263007/how-to-use-hex-color-values/24263296
+    // by Thomas Paul (https://stackoverflow.com/users/5235481/thomas-paul)
+    /// Usage: ```Color(hexString: "your_hex_string")```
     init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()
