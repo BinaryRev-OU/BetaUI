@@ -20,7 +20,7 @@ public struct BUISecureTextField: View {
         self._password = password
         self.placeholder = placeholder
         self.keyboardType = keyboardType
-        self.sfSymbol = "key"
+        self.sfSymbol = sfSymbol
         self.textLeading = 30
     }
     
@@ -36,6 +36,11 @@ public struct BUISecureTextField: View {
                 ZStack(alignment: .leading) {
                     if let systemImage = sfSymbol {
                         Image(systemName: systemImage)
+                            .foregroundColor(checkIfTextFieldIsEmpty(text: password) ? Color.gray : .bUIInputTextFieldColor)
+                            .opacity(checkIfTextFieldIsEmpty(text: password) ? 0.3 : 1)
+                            .padding(.horizontal, 5)
+                    } else {
+                        Image(systemName: "key")
                             .foregroundColor(checkIfTextFieldIsEmpty(text: password) ? Color.gray : .bUIInputTextFieldColor)
                             .opacity(checkIfTextFieldIsEmpty(text: password) ? 0.3 : 1)
                             .padding(.horizontal, 5)
