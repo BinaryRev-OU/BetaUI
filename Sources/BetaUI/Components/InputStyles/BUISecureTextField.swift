@@ -13,10 +13,10 @@ public struct BUISecureTextField: View {
     @Binding var password: String
     let placeholder: String
     let keyboardType: UIKeyboardType
-    var sfSymbol: String = "key"
-    var textLeading: CGFloat = 30
+    var sfSymbol: String
+    var textLeading: CGFloat
     
-    public init(password: Binding<String>, placeholder: String, keyboardType: UIKeyboardType, sfSymbol: String, textLeading: CGFloat) {
+    public init(password: Binding<String>, placeholder: String, keyboardType: UIKeyboardType, sfSymbol: String, textLeading: CGFloat = 30) {
         self._password = password
         self.placeholder = placeholder
         self.keyboardType = keyboardType
