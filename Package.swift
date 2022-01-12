@@ -25,7 +25,11 @@ let package = Package(
         .target(
             name: "BetaUI",
             dependencies: [],
-            path:"Sources"),
+            path:"Sources",
+            resources: [
+                .process("Media.xcassets")
+            ]
+        ),
         .testTarget(
             name: "BetaUITests",
             dependencies: ["BetaUI"]),

@@ -8,10 +8,10 @@
 import SwiftUI
 
 public extension Color {
-    /*
-     //FIXME: Dark mode is not handled
+    
      //MARK: Font colors
-     static let bUIHeaderTextColor = kMainColor1
+    static let bUIHeaderTextColor = Color("kMainColor1", bundle: .module)
+    /*
      static let bUIFootnoteTextColor = kMainColor2
      static let bUIInputTextFieldColor = kMainColor1
      static let bUISecureTextFieldColor = kMainColor1
