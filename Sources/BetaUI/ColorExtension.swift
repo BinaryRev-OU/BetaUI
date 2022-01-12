@@ -17,7 +17,7 @@ public extension Color {
     static let bUISecureTextFieldColor = Color("kMainColor1", bundle: .module)
     
     //MARK: Border colors
-    static let bUIBorderColor = Color("kMainColor1", bundle: .module)
+    static let bUIBorderColor = LinearGradient(colors: [Color("kMainColor1", bundle: .module), Color("kMainColor2", bundle: .module)], startPoint: .topLeading, endPoint: .bottomTrailing)
     
     //MARK: Button colors
     static let bUIButtonBaseColor1 = Color("kMainColor1", bundle: .module)
@@ -25,7 +25,7 @@ public extension Color {
     static let bUIButtonBaseColor3 = Color("kMainColor3", bundle: .module)
     static let bUIButtonTextColor = Color("kMainColor4", bundle: .module)
     static let bUIInverseButtonTextColor = Color("kMainColor1", bundle: .module)
-     
+    
     // Converting hex string to Color
     // https://stackoverflow.com/questions/24263007/how-to-use-hex-color-values/24263296
     // by Thomas Paul (https://stackoverflow.com/users/5235481/thomas-paul)
