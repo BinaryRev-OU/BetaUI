@@ -1,12 +1,15 @@
 import SwiftUI
 
 public struct BetaUI {
-    public private(set) var text = "Hello, World!"
     
     public init() {
     }
     
-    public func convColor(hexString: String) -> Color {
+    // Converting hex string to Color
+    // https://stackoverflow.com/questions/24263007/how-to-use-hex-color-values/24263296
+    // by Thomas Paul (https://stackoverflow.com/users/5235481/thomas-paul)
+    /// Usage: ```Color(hexString: "your_hex_string")```
+    public func colorConverter(hexString: String) -> Color {
         
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt64()
