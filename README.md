@@ -1,27 +1,58 @@
 # BetaUI Swift Package
-## Creating fast prototypes in SwiftUI, focusing on app logic instead of UI
+## Creating fast prototypes in SwiftUI
+
+Developer should focus on app logic instead of UI in the initial phase. Prebuild components allow to code the logic faster without too much compromise on the UI.
 
 ![](screenshot.png)
 
-### Components
+## Components
 
-#### - Border
+### - Border
 - DefaultTextFieldBorder ```BUIInputTextFiledBorder()```
-#### - Button
+### - Button
 - Default button ```.modifier(BUIDefaultButtonStyle())```
 - Inverse button ```.modifier(BUIInverseButtonStyle())```
 
-#### - Input
-- TextField
- 
+### - Input
+#### TextField
+
  ```
  BUIInputTextField(
 		 text: Binding<String>
 		 placeholder: String
 		 keyboardType: (UIKeyboardType)
 		 sfSymbol: String?
+		 textLeading: CGFloat = 30
  )
  ```
+
+ ##### Sample 1. - TextFiled without icon
+ ```
+ BUIInputTextField(text: $text,
+                   placeholder: "First name",
+                   keyboardType: .namePhonePad,
+                   sfSymbol: nil)
+ ```
+ ![](TextField1.png)
+
+ ##### Sample 2. - TextField with icon
+ ```
+ BUIInputTextField(text: $text,
+                   placeholder: "E-mail address",
+                   keyboardType: .emailAddress,
+                   sfSymbol: "envelope")
+ ```
+ ![](TextField2.png)
+
+ ##### Sample 3. - TextField with icon and with large text leading
+ ```
+ BUIInputTextField(text: $text,
+                  placeholder: "E-mail address",
+                  keyboardType: .emailAddress,
+                  sfSymbol: "envelope",
+                  textLeading: 100)
+ ```
+ ![](TextField3.png)
  
 - SecureTextFiled
 
@@ -30,9 +61,28 @@
 		 text: Binding<String>
 		 placeholder: String
 		 keyboardType: (UIKeyboardType)
-		 sfSymbol: String?
+		 sfSymbol: String = "key"
+		 textLeading: CGFloat = 30
  )
  ```
+ ##### Sample 1. - SecureTextFiled with default "key" icon
+ ```
+ BUISecureTextField(password: .$password,
+                    placeholder: "Secret password", 
+                    keyboardType: .default)
+ ```
+ ![](SecureTextField1.png)
+
+ ##### Sample 2. - TextField with custom "key.fill" icon
+ ```
+ BUISecureTextField(password: .$password,
+                    placeholder: "Secret password", 
+                    keyboardType: .default,
+                    sfSymbol: "key.fill")
+ ```
+ ![](SecureTextField2.png)
+
+
 #### - Textstyle (as ViewModifier)
 - Header ```.modifier(BUIHeaderText())```
 - Body ```.modifier(BUIBodyText())```
