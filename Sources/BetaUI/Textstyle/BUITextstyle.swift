@@ -7,24 +7,27 @@
 
 import SwiftUI
 
-struct BUIHeaderTextStyle: ViewModifier {
-    func body(content: Content) -> some View {
+public struct BUIHeaderTextStyle: ViewModifier {
+    public init() {}
+    public func body(content: Content) -> some View {
         content
             .font(.largeTitle.bold())
             .foregroundColor(.bUIHeaderTextColor)
     }
 }
 
-struct BUIBodyTextStyle: ViewModifier {
-    func body(content: Content) -> some View {
+public struct BUIBodyTextStyle: ViewModifier {
+    public init() {}
+    public func body(content: Content) -> some View {
         content
             .font(.body)
             .foregroundColor(.bUIBodyTextColor)
     }
 }
 
-struct BUIFootnoteTextStyle: ViewModifier {
-    func body(content: Content) -> some View {
+public struct BUIFootnoteTextStyle: ViewModifier {
+    public init() {}
+    public func body(content: Content) -> some View {
         content
             .font(.footnote)
             .foregroundColor(.bUIFootnoteTextColor)
