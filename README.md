@@ -34,6 +34,7 @@
  ```
 #### - Textstyle (as ViewModifier)
 - Header ```.modifier(BUIHeaderText())```
+- Body ```.modifier(BUIBodyText())```
 - Footnote ```.modifier(BUIFootnoteText())```
 
 ### Extension
