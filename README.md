@@ -88,6 +88,11 @@ Developer should focus on app logic instead of UI in the initial phase. Prebuild
 - Body ```.modifier(BUIBodyText())```
 - Footnote ```.modifier(BUIFootnoteText())```
 
+### Images
+
+- ```BUILogoImage```
+- ```BUIUserImage``` 
+
 ### Extension
 #### - Colors
 Default colors are stored in ```Media.xcassets``` file.
@@ -98,4 +103,10 @@ Default colors are stored in ```Media.xcassets``` file.
 - ```kMainColor4``` = "FFFFFF"
 
 You can use colors with hex values: ```Color(hexString: "yourColorHexValue")```
+
 #### - View
+Preview extension limits the preview the size of the elements.
+
+```.preview(with: "YourTitleOfPreview")```
+
+![](Preview.png)
