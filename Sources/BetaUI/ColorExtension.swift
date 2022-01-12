@@ -11,6 +11,7 @@ public extension Color {
     
     //MARK: Font colors
     static let bUIHeaderTextColor = Color("kMainColor1", bundle: .module)
+    static let bUIBodyTextColor = Color("kMainColor1", bundle: .module)
     static let bUIFootnoteTextColor = Color("kMainColor2", bundle: .module)
     static let bUIInputTextFieldColor = Color("kMainColor1", bundle: .module)
     static let bUISecureTextFieldColor = Color("kMainColor1", bundle: .module)
