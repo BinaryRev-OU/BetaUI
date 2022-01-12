@@ -8,11 +8,11 @@
 import SwiftUI
 
 // PreviewLayoutModifier
-struct PreviewLayoutModifier: ViewModifier {
-
+public struct PreviewLayoutModifier: ViewModifier {
+    
     let title: String
-
-    func body(content: Content) -> some View {
+    
+    public func body(content: Content) -> some View {
         content
             .previewLayout(.sizeThatFits)
             .previewDisplayName(title)
@@ -20,7 +20,7 @@ struct PreviewLayoutModifier: ViewModifier {
     }
 }
 
-extension View {
+public extension View {
     func preview(with title: String) -> some View {
         self.modifier(PreviewLayoutModifier(title: title))
     }
