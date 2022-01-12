@@ -13,16 +13,16 @@ public struct BUIInputTextField: View {
     let placeholder: String
     let keyboardType: UIKeyboardType
     let sfSymbol: String?
-    var textLeading: CGFloat = 30
+    var textLeading: CGFloat
     
-    public init(text: Binding<String>, placeholder: String, keyboardType: UIKeyboardType, sfSymbol: String?, textLeading: CGFloat) {
+    public init(text: Binding<String>, placeholder: String, keyboardType: UIKeyboardType, sfSymbol: String?, textLeading: CGFloat = 30) {
         self._text = text
         self.placeholder = placeholder
         self.keyboardType = keyboardType
         self.sfSymbol = sfSymbol
         self.textLeading = textLeading
     }
-        
+    
     public var body: some View {
         TextField(placeholder, text: $text)
             .foregroundColor(.bUIInputTextFieldColor)
