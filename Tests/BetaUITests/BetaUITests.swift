@@ -6,6 +6,6 @@ final class BetaUITests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(BetaUI().text, "Hello, World!")
+        // XCTAssertEqual(BetaUI().text, "Hello, World!")
     }
 }

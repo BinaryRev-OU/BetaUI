@@ -26,4 +26,6 @@ public extension Color {
      static let bUIButtonTextColor = kMainColor4
      static let bUIInverseButtonTextColor = kMainColor1
      */
+    
+    static let bUIHeaderTextColor = Color(.green)
 }
