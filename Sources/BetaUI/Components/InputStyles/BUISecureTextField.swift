@@ -45,3 +45,16 @@ public struct BUISecureTextField: View {
             )
     }
 }
+
+struct BUISecureField_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            
+            BUISecureTextField(password: .constant(""), placeholder: "Psst...password here", keyboardType: .default)
+                .preview(with: "SecuretextField with default icon")
+            
+            BUISecureTextField(password: .constant(""), placeholder: "Psst...password here", keyboardType: .default, sfSymbol: "key.fill")
+                .preview(with: "SecuretextField with default icon")
+        }
+    }
+}
