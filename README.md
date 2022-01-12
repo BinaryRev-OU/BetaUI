@@ -90,8 +90,8 @@ Developer should focus on app logic instead of UI in the initial phase. Prebuild
 
 ### Images
 
-- ```BUILogoImage```
-- ```BUIUserImage``` 
+- ```BUILogoImage(imageWidth: CGFloat, imageHeight: CGFloat)``` - default value is 150
+- ```BUIUserImage(imageWidth: CGFloat, imageHeight: CGFloat)``` - default value is 30
 
 ### Extension
 #### - Colors
