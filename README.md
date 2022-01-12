@@ -8,8 +8,9 @@
 #### - Border
 - DefaultTextFieldBorder ```BUIInputTextFiledBorder()```
 #### - Button
-- ```BUIDefaultButtonStyle```
-- ```BUIInverseButtonStyle```
+- Default button ```.modifier(BUIDefaultButtonStyle())```
+- Inverse button ```.modifier(BUIInverseButtonStyle())```
+
 #### - Input
 - TextField
  
