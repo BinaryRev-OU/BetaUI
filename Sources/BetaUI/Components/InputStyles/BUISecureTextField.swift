@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BUISecureTextField: View {
+public struct BUISecureTextField: View {
     
     
     @Binding var password: String
@@ -20,11 +20,11 @@ struct BUISecureTextField: View {
         self._password = password
         self.placeholder = placeholder
         self.keyboardType = keyboardType
-        self.sfSymbol = sfSymbol
+        self.sfSymbol = "key"
         self.textLeading = 30
     }
     
-    var body: some View {
+    public var body: some View {
         SecureField(placeholder, text: $password)
             .foregroundColor(.bUISecureTextFieldColor)
             .frame(maxWidth: .infinity, minHeight: 44)
