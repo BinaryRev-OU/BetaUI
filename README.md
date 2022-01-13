@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="./Resources/Icon.png" />
+	<img src="./Images/Icon.png" />
 </p>
 
 # BetaUI Swift Package
@@ -8,7 +8,7 @@
 Developer should focus on app logic instead of UI in the initial phase. Prebuild components allow to code the logic faster without too much compromise on the UI.
 
 <p align="center">
-	<img src="./Resources/screenshot.png" />
+	<img src="./Images/screenshot.png" />
 </p>
 
 ## Components
@@ -16,15 +16,15 @@ Developer should focus on app logic instead of UI in the initial phase. Prebuild
 ### - Border
 - DefaultTextFieldBorder ```BUIInputTextFiledBorder()```
 
-![](./Resources/BUITextFieldBorder.png)
+![](./Images/BUITextFieldBorder.png)
 
 ### - Button
 - Default button ```.modifier(BUIDefaultButtonStyle())```
 
-![](./Resources/BUIDefaultButtonStyle.png)
+![](./Images/BUIDefaultButtonStyle.png)
 - Inverse button ```.modifier(BUIInverseButtonStyle())```
 
-![](./Resources/BUIInverseButtonStyle.png)
+![](./Images/BUIInverseButtonStyle.png)
 
 ### - Input
 #### TextField
@@ -110,10 +110,10 @@ Developer should focus on app logic instead of UI in the initial phase. Prebuild
 #### - Colors
 Default colors are stored in ```Media.xcassets``` file.
 
-- ![](./Resources/Orange.png)  ```kMainColor1``` = "EF7F4A" 
-- ![](./Resources/Cream.png)   ```kMainColor2``` = "F7B7A6"
-- ![](./Resources/LightCream.png) ```kMainColor3``` = "FCE5DB"   
-- ![](./Resources/White.png) ```kMainColor4``` = "FFFFFF"
+- ![](./Images/Orange.png)  ```kMainColor1``` = "EF7F4A" 
+- ![](./Images/Cream.png)   ```kMainColor2``` = "F7B7A6"
+- ![](./Images/LightCream.png) ```kMainColor3``` = "FCE5DB"   
+- ![](./Images/White.png) ```kMainColor4``` = "FFFFFF"
 
 You can use colors with hex values: ```Color(hexString: "yourColorHexValue")```
 
