@@ -21,7 +21,7 @@ public struct BUIDefaultButtonStyle: ViewModifier {
             .background(LinearGradient(gradient: Gradient(colors: [Color.bUIButtonBaseColor1.opacity(0.9), Color.bUIButtonBaseColor1.opacity(0.75)]), startPoint: .top, endPoint: .trailing))
             .cornerRadius(7)
             .overlay(
-                RoundedRectangle(cornerRadius: 5, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
+                RoundedRectangle(cornerRadius: 7, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
                     .stroke(Color.bUIButtonBaseColor1, lineWidth: 2)
             )
     }
@@ -41,7 +41,7 @@ public struct BUIInverseButtonStyle: ViewModifier {
             .foregroundColor(.bUIInverseButtonTextColor)
             .cornerRadius(7)
             .overlay(
-                RoundedRectangle(cornerRadius: 5, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
+                RoundedRectangle(cornerRadius: 7, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/)
                     .stroke(Color.bUIButtonBaseColor1, lineWidth: 2)
             )
         
