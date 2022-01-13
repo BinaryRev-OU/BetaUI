@@ -1,17 +1,30 @@
+<p align="center">
+	<img src="./Resources/Icon.png" />
+</p>
+
 # BetaUI Swift Package
 ## Creating fast prototypes in SwiftUI
 
 Developer should focus on app logic instead of UI in the initial phase. Prebuild components allow to code the logic faster without too much compromise on the UI.
 
-![](screenshot.png)
+<p align="center">
+	<img src="./Resources/screenshot.png" />
+</p>
 
 ## Components
 
 ### - Border
 - DefaultTextFieldBorder ```BUIInputTextFiledBorder()```
+
+![](./Resources/BUITextFieldBorder.png)
+
 ### - Button
 - Default button ```.modifier(BUIDefaultButtonStyle())```
+
+![](./Resources/BUIDefaultButtonStyle.png)
 - Inverse button ```.modifier(BUIInverseButtonStyle())```
+
+![](./Resources/BUIInverseButtonStyle.png)
 
 ### - Input
 #### TextField
@@ -97,10 +110,10 @@ Developer should focus on app logic instead of UI in the initial phase. Prebuild
 #### - Colors
 Default colors are stored in ```Media.xcassets``` file.
 
-- ```kMainColor1``` = "EF7F4A"
-- ```kMainColor2``` = "F7B7A6"
-- ```kMainColor3``` = "FCE5DB"
-- ```kMainColor4``` = "FFFFFF"
+- ![](./Resources/Orange.png)  ```kMainColor1``` = "EF7F4A" 
+- ![](./Resources/Cream.png)   ```kMainColor2``` = "F7B7A6"
+- ![](./Resources/LightCream.png) ```kMainColor3``` = "FCE5DB"   
+- ![](./Resources/White.png) ```kMainColor4``` = "FFFFFF"
 
 You can use colors with hex values: ```Color(hexString: "yourColorHexValue")```
 
