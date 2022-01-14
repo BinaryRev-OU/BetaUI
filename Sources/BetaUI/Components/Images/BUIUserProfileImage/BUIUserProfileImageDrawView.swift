@@ -10,7 +10,7 @@ import UIKit
 public class BUIUserProfileImageDrawView: UIView {
     
     public override init(frame: CGRect) {
-        super.init(frame: frame)
+        super.init(frame: .zero)
     }
     
     public required init(coder aDecoder: NSCoder) {
