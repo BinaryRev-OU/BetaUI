@@ -9,6 +9,8 @@ import UIKit
 
 public class BUIUserProfileImageDrawView: UIView {
     
+    public init() {}
+    
     public override func draw(_ rect: CGRect) {
         BUIImagesCode.drawBUIUserProfileImage()
     }

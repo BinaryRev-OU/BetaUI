@@ -11,6 +11,8 @@ import SwiftUI
 
 public struct BUIUserProfileImageViewRepresentable: UIViewRepresentable {
     
+    public init() {}
+    
     public typealias UIViewType = BUIUserProfileImageDrawView
     
     public func makeUIView(context: Context) -> BUIUserProfileImageDrawView {
