@@ -9,7 +9,13 @@ import UIKit
 
 public class BUIUserProfileImageDrawView: UIView {
     
-    public init() {}
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    public required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+    }
     
     public override func draw(_ rect: CGRect) {
         BUIImagesCode.drawBUIUserProfileImage()
