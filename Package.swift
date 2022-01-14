@@ -14,9 +14,6 @@ let package = Package(
         .library(
             name: "BetaUI",
             targets: ["BetaUI"]),
-        .library(
-            name: "BetaUI Images",
-            targets: ["BetaUI Images"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -28,14 +25,9 @@ let package = Package(
         .target(
             name: "BetaUI",
             dependencies: [],
-            path:"Sources/BetaUI/Components",
+            path:"Sources",
             resources: [
                 .process("Media.xcassets")
-            ])
-        .target(
-            name: "BetaUI Images",
-            dependencies: ["BetaUI"],
-            path:"Sources/BetaUI/Images"
-        )
+        ])
     ]
 )
