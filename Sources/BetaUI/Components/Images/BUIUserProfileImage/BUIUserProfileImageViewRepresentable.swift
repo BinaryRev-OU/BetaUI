@@ -16,7 +16,7 @@ public struct BUIUserProfileImageViewRepresentable: UIViewRepresentable {
     public typealias UIViewType = BUIUserProfileImageDrawView
     
     public func makeUIView(context: Context) -> BUIUserProfileImageDrawView {
-        return BUIUserProfileImageDrawView.init(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        return BUIUserProfileImageDrawView()
     }
     
     public func updateUIView(_ uiView: UIViewType, context: Context) {
