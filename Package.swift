@@ -13,10 +13,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Components",
-            targets: ["Components"]),
-        .library(
-            name: "Images",
-            targets: ["Images"])
+            targets: ["Components"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -28,13 +25,9 @@ let package = Package(
         .target(
             name: "Components",
             dependencies: [],
-            path:"Sources/General",
+            path:"Sources",
             resources: [
                 .process("Media.xcassets")
-            ]),
-        .target(
-            name: "Images",
-            dependencies: ["Components"],
-            path:"Sources/Additions")
+            ])
     ]
 )
