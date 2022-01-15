@@ -10,13 +10,13 @@ import SwiftUI
 
 public struct BUIUserProfile: NSViewRepresentable {
     
-    typealias NSViewType = BUIUserProfileDrawView
+    public typealias NSViewType = BUIUserProfileDrawView
     
     public func makeNSView(context: Context) -> PressureDrawView {
         return BUIUserProfileDrawView()
     }
     
     // We don't use this method.
-    func updateNSView(_ nsView: BUIUserProfileDrawView, context: Context) {}
+    public func updateNSView(_ nsView: BUIUserProfileDrawView, context: Context) {}
 }
 #endif

@@ -8,18 +8,18 @@
 #if !os(iOS)
 import Cocoa
 
-class BUIUserProfileDrawView: NSView {
+public class BUIUserProfileDrawView: NSView {
     
-    init(frame: CGRect) {
+    public init(frame: CGRect) {
         super.init(frame: .zero)
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
 
-    override func draw(_ dirtyRect: NSRect) {
+    public override func draw(_ dirtyRect: NSRect) {
         BUIImagesmacOSCode.drawBUIUserProfileImage()
     }
 }
