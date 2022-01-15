@@ -7,7 +7,6 @@
 
 #if !os(iOS)
 import Cocoa
-import CoreGraphics
 
 class BUIUserProfileDrawView: NSView {
     

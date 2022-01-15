@@ -19,6 +19,6 @@ class BUIUserProfileDrawView: UIView {
     
     override func draw(_ rect: CGRect) {
         backgroundColor = .clear
-        BUIImagesiOSCode.drawBUIUserProfileImage()
+        BUIImagesiOSCode.drawBUIUserProfileImage(frame: rect, resizing: .aspectFit)
     }
 }
