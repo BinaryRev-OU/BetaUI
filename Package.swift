@@ -16,7 +16,10 @@ let package = Package(
             targets: ["BetaUI"]),
         .library(
             name: "macOS",
-            targets: ["macOS"])
+            targets: ["macOS"]),
+        .library(
+            name: "iOS",
+            targets: ["iOS"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -35,8 +38,13 @@ let package = Package(
         ),
         .target(
             name: "macOS",
-            dependencies: [],
+            dependencies: ["BetaUI"],
             path:"Sources/macOS"
+        ),
+        .target(
+            name: "iOS",
+            dependencies: ["BetaUI"],
+            path:"Sources/iOS"
         )
     ]
 )
