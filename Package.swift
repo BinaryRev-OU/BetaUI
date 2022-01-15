@@ -13,7 +13,10 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BetaUI",
-            targets: ["BetaUI"])
+            targets: ["BetaUI"]),
+        .library(
+            name: "macOS",
+            targets: ["macOS"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -25,9 +28,15 @@ let package = Package(
         .target(
             name: "BetaUI",
             dependencies: [],
-            path:"Sources",
+            path:"Sources/BetaUI",
             resources: [
                 .process("Media.xcassets")
-            ])
+            ]
+        ),
+        .target(
+            name: "macOS",
+            dependencies: [],
+            path:"Sources/macOS"
+        )
     ]
 )
