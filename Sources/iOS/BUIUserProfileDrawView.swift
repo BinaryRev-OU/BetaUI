@@ -18,13 +18,12 @@ public class BUIUserProfileDrawView: UIView {
         super.init(frame: .zero)
     }
     
-    // TODO: super init()
     public required init?(coder: NSCoder) {
-       fatalError()
+        fatalError("init(coder:) has not been implemented")
     }
     
     public override func draw(_ rect: CGRect) {
         backgroundColor = .clear
-        BUIImagesiOSCode.drawBUIUserProfileImage(frame: CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight), resizing: .aspectFit)
+        BUIImagesiOSCode.drawBUIUserProfileImage(frame: CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight))
     }
 }
