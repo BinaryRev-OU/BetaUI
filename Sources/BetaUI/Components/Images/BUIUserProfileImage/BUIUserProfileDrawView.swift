@@ -9,13 +9,8 @@ import UIKit
 
 public class BUIUserProfileDrawView: UIView {
     
-    public var imageWidth: CGFloat
-    public var imageHeight: CGFloat
-    
-    public init(imageWidth: CGFloat, imageHeight: CGFloat) {
-        self.imageWidth = imageWidth
-        self.imageHeight = imageHeight
-        super.init(frame: .zero)
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
     public required init?(coder: NSCoder) {
@@ -24,6 +19,6 @@ public class BUIUserProfileDrawView: UIView {
     
     public override func draw(_ rect: CGRect) {
         backgroundColor = .clear
-        BUIImagesiOSCode.drawBUIUserProfileImage(frame: CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight))
+        BUIImagesiOSCode.drawBUIUserProfileImage(frame: frame, resizing: .aspectFit)
     }
 }
