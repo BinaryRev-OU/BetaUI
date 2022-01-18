@@ -9,8 +9,8 @@ import UIKit
 
 public class BUIUserProfileDrawView: UIView {
     
-    var imageWidth: CGFloat
-    var imageHeight: CGFloat
+    public var imageWidth: CGFloat
+    public var imageHeight: CGFloat
     
     public init(imageWidth: CGFloat, imageHeight: CGFloat) {
         self.imageWidth = imageWidth
