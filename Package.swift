@@ -6,17 +6,13 @@ import PackageDescription
 let package = Package(
     name: "BetaUI",
     platforms: [
-        .iOS(.v14),
-        .macOS(.v11)
+        .iOS(.v14)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "BetaUI",
             targets: ["BetaUI"]),
-        .library(
-            name: "macOS",
-            targets: ["macOS"]),
         .library(
             name: "iOS",
             targets: ["iOS"])
@@ -35,11 +31,6 @@ let package = Package(
             resources: [
                 .process("Media.xcassets")
             ]
-        ),
-        .target(
-            name: "macOS",
-            dependencies: ["BetaUI"],
-            path:"Sources/macOS"
         ),
         .target(
             name: "iOS",

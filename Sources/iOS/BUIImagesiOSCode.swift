@@ -10,7 +10,6 @@
 //
 
 
-#if os(iOS)
 import UIKit
 
 public class BUIImagesiOSCode : NSObject {
@@ -122,4 +121,3 @@ public class BUIImagesiOSCode : NSObject {
         }
     }
 }
-#endif

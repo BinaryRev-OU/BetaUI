@@ -5,7 +5,6 @@
 //  Created by Szabolcs Tóth on 2022. 01. 14..
 //
 
-#if os(iOS)
 import SwiftUI
 
 public struct BUIUserProfile: UIViewRepresentable {
@@ -23,4 +22,3 @@ public struct BUIUserProfile: UIViewRepresentable {
         
     }
 }
-#endif
