@@ -8,16 +8,17 @@
 import SwiftUI
 
 public struct BUIUserProfile: UIViewRepresentable {
+    
     public typealias UIViewType = BUIUserProfileDrawView
     
+    public var imageWidth: CGFloat
+    public var imageHeight: CGFloat
     
     public func makeUIView(context: Context) -> BUIUserProfileDrawView {
-        return BUIUserProfileDrawView()
+        return BUIUserProfileDrawView(imageWidth: imageWidth, imageHeight: imageHeight)
     }
     
     public func updateUIView(_ uiView: BUIUserProfileDrawView, context: Context) {
         
     }
-    
-    
 }

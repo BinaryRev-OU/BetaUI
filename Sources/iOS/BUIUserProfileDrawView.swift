@@ -9,16 +9,22 @@ import UIKit
 
 public class BUIUserProfileDrawView: UIView {
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    var imageWidth: CGFloat
+    var imageHeight: CGFloat
+    
+    public init(imageWidth: CGFloat, imageHeight: CGFloat) {
+        self.imageWidth = imageWidth
+        self.imageHeight = imageHeight
+        super.init(frame: .zero)
     }
     
+    // TODO: super init()
     public required init?(coder: NSCoder) {
-        super.init(coder: coder)
+       fatalError()
     }
     
     public override func draw(_ rect: CGRect) {
         backgroundColor = .clear
-        BUIImagesiOSCode.drawBUIUserProfileImage(frame: rect, resizing: .aspectFit)
+        BUIImagesiOSCode.drawBUIUserProfileImage(frame: CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight), resizing: .aspectFit)
     }
 }
