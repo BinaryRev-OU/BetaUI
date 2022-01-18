@@ -10,27 +10,27 @@
 //
 
 
-
+#if os(iOS)
 import UIKit
 
 public class BUIImagesiOSCode : NSObject {
-
+    
     //// Cache
-
+    
     private struct Cache {
         static let kMainColor1: UIColor = UIColor(red: 0.937, green: 0.498, blue: 0.290, alpha: 1.000)
         static let kMainColor3: UIColor = UIColor(red: 0.988, green: 0.898, blue: 0.859, alpha: 1.000)
         static let kMainColor2: UIColor = UIColor(red: 0.969, green: 0.718, blue: 0.651, alpha: 1.000)
     }
-
+    
     //// Colors
-
+    
     @objc dynamic public class var kMainColor1: UIColor { return Cache.kMainColor1 }
     @objc dynamic public class var kMainColor3: UIColor { return Cache.kMainColor3 }
     @objc dynamic public class var kMainColor2: UIColor { return Cache.kMainColor2 }
-
+    
     //// Drawing Methods
-
+    
     @objc dynamic public class func drawBUIUserProfileImage(frame targetFrame: CGRect = CGRect(x: 0, y: 0, width: 26, height: 26), resizing: ResizingBehavior = .aspectFit) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()!
@@ -40,8 +40,8 @@ public class BUIImagesiOSCode : NSObject {
         let resizedFrame: CGRect = resizing.apply(rect: CGRect(x: 0, y: 0, width: 26, height: 26), target: targetFrame)
         context.translateBy(x: resizedFrame.minX, y: resizedFrame.minY)
         context.scaleBy(x: resizedFrame.width / 26, y: resizedFrame.height / 26)
-
-
+        
+        
         //// user-circle
         //// Oval Drawing
         let ovalPath = UIBezierPath(ovalIn: CGRect(x: 3, y: 3, width: 20, height: 20))
@@ -50,8 +50,8 @@ public class BUIImagesiOSCode : NSObject {
         BUIImagesiOSCode.kMainColor1.setStroke()
         ovalPath.lineWidth = 1
         ovalPath.stroke()
-
-
+        
+        
         //// Bezier Drawing
         let bezierPath = UIBezierPath()
         bezierPath.move(to: CGPoint(x: 20.33, y: 19.79))
@@ -66,8 +66,8 @@ public class BUIImagesiOSCode : NSObject {
         bezierPath.lineWidth = 1
         bezierPath.lineCapStyle = .round
         bezierPath.stroke()
-
-
+        
+        
         //// Oval 2 Drawing
         let oval2Path = UIBezierPath(ovalIn: CGRect(x: 9, y: 7, width: 8, height: 8))
         BUIImagesiOSCode.kMainColor2.setFill()
@@ -77,42 +77,42 @@ public class BUIImagesiOSCode : NSObject {
         oval2Path.stroke()
         
         context.restoreGState()
-
+        
     }
-
-
-
-
+    
+    
+    
+    
     @objc(BUIImagesiOSCodeResizingBehavior)
     public enum ResizingBehavior: Int {
         case aspectFit /// The content is proportionally resized to fit into the target rectangle.
         case aspectFill /// The content is proportionally resized to completely fill the target rectangle.
         case stretch /// The content is stretched to match the entire target rectangle.
         case center /// The content is centered in the target rectangle, but it is NOT resized.
-
+        
         public func apply(rect: CGRect, target: CGRect) -> CGRect {
             if rect == target || target == CGRect.zero {
                 return rect
             }
-
+            
             var scales = CGSize.zero
             scales.width = abs(target.width / rect.width)
             scales.height = abs(target.height / rect.height)
-
+            
             switch self {
-                case .aspectFit:
-                    scales.width = min(scales.width, scales.height)
-                    scales.height = scales.width
-                case .aspectFill:
-                    scales.width = max(scales.width, scales.height)
-                    scales.height = scales.width
-                case .stretch:
-                    break
-                case .center:
-                    scales.width = 1
-                    scales.height = 1
+            case .aspectFit:
+                scales.width = min(scales.width, scales.height)
+                scales.height = scales.width
+            case .aspectFill:
+                scales.width = max(scales.width, scales.height)
+                scales.height = scales.width
+            case .stretch:
+                break
+            case .center:
+                scales.width = 1
+                scales.height = 1
             }
-
+            
             var result = rect.standardized
             result.size.width *= scales.width
             result.size.height *= scales.height
@@ -122,3 +122,4 @@ public class BUIImagesiOSCode : NSObject {
         }
     }
 }
+#endif
