@@ -5,6 +5,7 @@
 //  Created by Szabolcs Tóth on 2022. 01. 14..
 //
 
+#if os(iOS)
 import UIKit
 
 public class BUIUserProfileDrawView: UIView {
@@ -27,3 +28,4 @@ public class BUIUserProfileDrawView: UIView {
         BUIImagesiOSCode.drawBUIUserProfileImage(frame: CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight))
     }
 }
+#endif
