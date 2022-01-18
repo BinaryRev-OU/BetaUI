@@ -14,6 +14,11 @@ public struct BUIUserProfile: UIViewRepresentable {
     public var imageWidth: CGFloat
     public var imageHeight: CGFloat
     
+    public init(imageWidht: CGFloat, imageHeight: CGFloat) {
+        self.imageWidth = imageWidht
+        self.imageHeight = imageHeight
+    }
+    
     public func makeUIView(context: Context) -> BUIUserProfileDrawView {
         return BUIUserProfileDrawView(imageWidth: imageWidth, imageHeight: imageHeight)
     }

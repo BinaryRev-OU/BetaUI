@@ -14,6 +14,11 @@ public struct BUILogoImage: UIViewRepresentable {
     public var imageWidth: CGFloat
     public var imageHeight: CGFloat
     
+    public init(imageWidht: CGFloat, imageHeight: CGFloat) {
+        self.imageWidth = imageWidht
+        self.imageHeight = imageHeight
+    }
+    
     public func makeUIView(context: Context) -> BUILogoImageDrawView {
         return BUILogoImageDrawView(imageWidth: imageWidth, imageHeight: imageHeight)
     }
