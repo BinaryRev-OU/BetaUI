@@ -12,8 +12,11 @@ public struct BUIUserProfile: NSViewRepresentable {
     
     public typealias NSViewType = BUIUserProfileDrawView
     
+    public var imageWidth: CGFloat
+    public var imageHeight: CGFloat
+    
     public func makeNSView(context: Context) -> PressureDrawView {
-        return BUIUserProfileDrawView()
+        return BUIUserProfileDrawView(imageWidth: imageWidth, imageHeight: imageHeight)
     }
     
     // We don't use this method.

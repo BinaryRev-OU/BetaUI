@@ -7,10 +7,16 @@
 
 #if !os(iOS)
 import Cocoa
+import CoreGraphics
 
 public class BUIUserProfileDrawView: NSView {
     
-    public init(frame: CGRect) {
+    public var imageWidth: CGFloat
+    public var imageHeight: CGFloat
+    
+    public init(imageWidth: CGFloat, imageHeight: CGFloat) {
+        self.imageWidth = imageWidth
+        self.imageHeight = imageHeight
         super.init(frame: .zero)
     }
     
@@ -20,7 +26,7 @@ public class BUIUserProfileDrawView: NSView {
     
 
     public override func draw(_ dirtyRect: NSRect) {
-        BUIImagesmacOSCode.drawBUIUserProfileImage()
+        BUIImagesmacOSCode.drawBUIUserProfileImage(frame: CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight))
     }
 }
 #endif
