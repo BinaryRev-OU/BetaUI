@@ -19,6 +19,6 @@ public class BUILogoImageDrawView: UIView {
     
     public override func draw(_ rect: CGRect) {
         backgroundColor = .clear
-        BUIImagesiOSCode.drawBUILogoImage(frame: frame)
+        BUIImagesiOSCode.drawBUILogoImage()
     }
 }
