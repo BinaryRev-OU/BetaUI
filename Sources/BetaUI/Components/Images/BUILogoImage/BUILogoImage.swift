@@ -10,17 +10,11 @@ import SwiftUI
 public struct BUILogoImage: UIViewRepresentable {
     
     public typealias UIViewType = BUILogoImageDrawView
-    
-    public var imageWidth: CGFloat
-    public var imageHeight: CGFloat
-    
-    public init(imageWidht: CGFloat, imageHeight: CGFloat) {
-        self.imageWidth = imageWidht
-        self.imageHeight = imageHeight
-    }
+        
+    public init() {}
     
     public func makeUIView(context: Context) -> BUILogoImageDrawView {
-        return BUILogoImageDrawView(frame: CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight))
+        return BUILogoImageDrawView()
     }
     
     public func updateUIView(_ uiView: BUILogoImageDrawView, context: Context) {
