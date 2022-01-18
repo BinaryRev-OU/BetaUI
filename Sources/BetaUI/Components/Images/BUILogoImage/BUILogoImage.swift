@@ -20,7 +20,7 @@ public struct BUILogoImage: UIViewRepresentable {
     }
     
     public func makeUIView(context: Context) -> BUILogoImageDrawView {
-        return BUILogoImageDrawView(imageWidth: imageWidth, imageHeight: imageHeight)
+        return BUILogoImageDrawView(frame: CGRect(x: 0, y: 0, width: imageWidth, height: imageHeight))
     }
     
     public func updateUIView(_ uiView: BUILogoImageDrawView, context: Context) {
