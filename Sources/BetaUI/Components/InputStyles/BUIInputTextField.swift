@@ -27,7 +27,7 @@ public struct BUIInputTextField: View {
         TextField(placeholder, text: $text)
             .foregroundColor(.bUIInputTextFieldColor)
             .frame(maxWidth: .infinity, minHeight: 44)
-            .padding(.leading, sfSymbol == nil ? textLeading / 2 : textLeading)
+            .padding(.leading, textLeading)
             .autocapitalization(keyboardType == .default ? .words : .none)
             .keyboardType(keyboardType)
             .background(
